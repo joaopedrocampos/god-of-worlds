@@ -1,5 +1,7 @@
 # GOD OF WORLDS
 
+![É O TAL DO DEUS DOS MUNDOS](https://i.pinimg.com/originals/f3/3c/62/f33c628e78033b9645dabe9a69cfd41a.jpg)
+
 ## One admin to rule them all
 
 This is a React Admin, to run it you need [yarn](https://yarnpkg.com/) installed
