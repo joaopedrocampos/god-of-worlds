@@ -14,7 +14,7 @@ import {
 import PublicIcon from '@material-ui/icons/Public';
 export const WorldIcon = PublicIcon;
 
-export const WorldList = (props) => (
+export const WorldList = (props: any) => (
     <List {...props}>
         <Datagrid>
             <TextField source="id" />
@@ -28,12 +28,12 @@ export const WorldList = (props) => (
     </List>
 );
 
-const WorldName = ({ record }) => {
+const WorldName = (record: { [key: string]: any }) => {
     return <span>World {record ? `"${record.name}"` : ''}</span>;
 };
 
-export const WorldEdit = (props) => (
-    <Edit title={<WorldName />} {...props}>
+export const WorldEdit = (props: any) => (
+    <Edit title={WorldName} {...props}>
         <SimpleForm>
             <TextInput disabled source="id" />
             <TextInput source="name" />
@@ -45,7 +45,7 @@ export const WorldEdit = (props) => (
     </Edit>
 );
 
-export const WorldCreate = (props) => (
+export const WorldCreate = (props: any) => (
     <Create title="Create a World" {...props}>
         <SimpleForm>
             <TextInput source="name" />
