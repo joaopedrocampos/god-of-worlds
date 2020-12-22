@@ -12,6 +12,7 @@ import {
     DateInput,
 } from 'react-admin';
 import PublicIcon from '@material-ui/icons/Public';
+
 export const WorldIcon = PublicIcon;
 
 export const WorldList = (props: any) => (

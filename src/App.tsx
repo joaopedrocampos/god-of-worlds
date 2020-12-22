@@ -1,24 +1,21 @@
 import * as React from 'react';
-import { render } from 'react-dom';
-import { Admin, Resource, ListGuesser, DataProvider } from 'react-admin';
-import jsonServerProvider from 'ra-data-json-server';
+import { Admin, Resource } from 'react-admin';
+import dataProvider from './dataProvider';
+import WorldsEdit from './components/worlds/WorldsEdit';
+import WorldsCreate from './components/worlds/WorldsCreate';
+import WorldsList from './components/worlds/WorldsList';
 
-import { WorldList, WorldEdit, WorldCreate, WorldIcon } from './worlds';
-
-const dataProvider: DataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
-const App = () =>
-    render(
+const App = () => {
+    return (
         <Admin dataProvider={dataProvider}>
             <Resource
-                name="world"
-                list={WorldList}
-                edit={WorldEdit}
-                create={WorldCreate}
-                icon={WorldIcon}
+                name="worlds"
+                list={WorldsList}
+                edit={WorldsEdit}
+                create={WorldsCreate}
             />
-            <Resource name="users" list={ListGuesser} />
-        </Admin>,
-        document.getElementById('root')
+        </Admin>
     );
+};
 
 export default App;
